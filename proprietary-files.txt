@@ -270,7 +270,7 @@ odm/etc/camera/dng/ToneCurve_imx581_2.txt
 odm/etc/camera/dng/ToneCurve_imx709_3.txt
 odm/etc/camera/dng/ToneCurve_imx890_0.txt
 odm/etc/camera/eis_camera.vcfg
-odm/etc/camera/facesr_hd_composite_ref_4.1.18_qcom8550_ppl3_ocl.model
+odm/etc/camera/facesr_hd_composite_ref_4.3.15_qcom8550_qnn_segqnn_qnn2.3_qualityv27.model
 odm/etc/camera/fb_default
 odm/etc/camera/fb_model/000.png
 odm/etc/camera/fb_model/000_pre.bin
@@ -785,10 +785,6 @@ odm/etc/camera/pfb_bin/BeardSharp.bin
 odm/etc/camera/pfb_bin/BeardSharp.frag
 odm/etc/camera/pfb_bin/BeardSharp.vert
 odm/etc/camera/pfb_bin/PreAddSRBinary.bin
-odm/etc/camera/pfb_bin/PreBilaFilterBinary.bin
-odm/etc/camera/pfb_bin/PreBilaFilterBinaryV.bin
-odm/etc/camera/pfb_bin/PreBilaFilterMixBinary.bin
-odm/etc/camera/pfb_bin/PreBilaFilterMixByFaceTargetBinary.bin
 odm/etc/camera/pfb_bin/PreCalVarBinary.bin
 odm/etc/camera/pfb_bin/PreCalcSRBinary.bin
 odm/etc/camera/pfb_bin/PreCalculateOutTex.bin
@@ -908,18 +904,17 @@ odm/etc/vintf/manifest/manifest_oplus_cameraextension_aidl.xml
 odm/etc/vintf/manifest/manifest_oplus_cammidasservice_aidl.xml
 odm/etc/vintf/manifest/manifest_oplus_sendextcamcmd.xml
 odm/lib/vendor.oplus.hardware.extcamera@1.0.so
-odm/lib64/camera/com.qti.sensor.imx581.so
-odm/lib64/camera/com.qti.sensor.imx709.so
-odm/lib64/camera/com.qti.sensor.imx800.so
+odm/lib64/camera/com.qti.sensor.imx355.so
 odm/lib64/camera/com.qti.sensor.imx890.so
+odm/lib64/camera/com.qti.sensor.ov02b.so
 odm/lib64/camera/com.qti.sensor.s5k3p9.so
-odm/lib64/camera/com.qti.sensormodule.qtech_imx581.bin
-odm/lib64/camera/com.qti.sensormodule.qtech_imx709.bin
 odm/lib64/camera/com.qti.sensormodule.qtech_imx890.bin
+odm/lib64/camera/com.qti.sensormodule.shine_ov02b.bin
+odm/lib64/camera/com.qti.sensormodule.sunny_imx355.bin
 odm/lib64/camera/com.qti.sensormodule.sunny_s5k3p9.bin
-odm/lib64/camera/com.qti.tuned.qtech_imx581.bin
-odm/lib64/camera/com.qti.tuned.qtech_imx709.bin
+odm/lib64/camera/com.qti.tuned.imx355_sunny.bin
 odm/lib64/camera/com.qti.tuned.qtech_imx890.bin
+odm/lib64/camera/com.qti.tuned.shine_ov02b.bin
 odm/lib64/camera/com.qti.tuned.sunny_s5k3p9.bin
 odm/lib64/camera/components/com.oplus.node.preview.so
 odm/lib64/camera/components/com.oplus.node.sstabdefer.so
@@ -939,10 +934,7 @@ odm/lib64/camera/libaecCustomParam_Cam0.bin
 odm/lib64/camera/libaecCustomParam_Cam1.bin
 odm/lib64/camera/libaecCustomParam_Cam2.bin
 odm/lib64/camera/libaecCustomParam_Cam3.bin
-odm/lib64/camera/libafCustomParamFrontMain.bin
 odm/lib64/camera/libafCustomParamMain.bin
-odm/lib64/camera/libafCustomParamTele.bin
-odm/lib64/camera/libafCustomParamWide.bin
 odm/lib64/camera/revision.txt
 odm/lib64/hw/camera.oemlayer.so
 odm/lib64/lib2DSlender.so
@@ -1057,7 +1049,6 @@ odm/lib64/libarcsoft_smart_denoise.so
 odm/lib64/libarcsoft_smart_denoise_v4.so
 odm/lib64/libarcsoft_triple_sat.so
 odm/lib64/libarcsoft_triple_zoomtranslator.so
-odm/lib64/libarcsoft_turbo_fusion_raw_grf.so
 odm/lib64/libarcsoft_turbo_fusion_raw_portrait_super_night.so
 odm/lib64/libarcsoft_turbo_fusion_raw_super_night.so
 odm/lib64/libarcsoft_turbo_hdr_raw.so
@@ -1088,7 +1079,7 @@ odm/lib64/liboptical_zoom_dc.so
 odm/lib64/liboptical_zoom_vs.so
 odm/lib64/liboutils.so
 odm/lib64/libpngwrapper.so
-odm/lib64/libportrait_repair_ppl3_ocl.so
+odm/lib64/libportrait_repair_qnn.so
 odm/lib64/libremosaic_wrapper.so
 odm/lib64/libremosaiclib_s5k3p9.so
 odm/lib64/libremosaiclib_s5kjn1.so
@@ -1120,6 +1111,7 @@ vendor/etc/init/vendor.qti.camera.provider-service_64.rc
 vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl-1.3.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.provider.xml
+
 vendor/lib64/camera/arcsoft_calibration_uw.bin
 vendor/lib64/camera/arcsoft_calibration_wt.bin
 vendor/lib64/camera/arcsoft_dc_calibration_t.bin
@@ -1345,9 +1337,9 @@ vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 
 # Charger
-odm/firmware/fastchg/22861/bms_heating_config.txt
-odm/firmware/fastchg/22861/charging_hyper_mode_config.txt
-odm/firmware/fastchg/22861/charging_thermal_config_default.txt
+odm/firmware/fastchg/22851/charging_hyper_mode_config.txt
+odm/firmware/fastchg/bms_heating_config.txt
+odm/firmware/fastchg/charging_thermal_config_default.txt
 odm/firmware/fastchg/smart_chg_config_table.txt
 vendor/etc/charger_fw_fstab.qti
 
@@ -1447,8 +1439,8 @@ vendor/etc/seccomp_policy/qwesd@2.0.policy
 vendor/etc/ssg/tz_whitelist.json
 
 # Context Hub
-odm/etc/init/android.hardware.contexthub-service.qmi.rc
-odm/etc/permissions/android.hardware.context_hub.xml
+#odm/etc/init/android.hardware.contexthub-service.qmi.rc
+#odm/etc/permissions/android.hardware.context_hub.xml
 odm/etc/vintf/manifest/android.hardware.contexthub-service.qmi.xml
 vendor/bin/hw/android.hardware.contexthub-service.qmi
 vendor/etc/chre/preloaded_nanoapps.json
@@ -2496,12 +2488,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
 # RIL - UIM
-product/app/uimgbaservice/uimgbaservice.apk
-product/etc/permissions/UimGba.xml
-product/etc/permissions/UimGbaManager.xml
 product/etc/permissions/UimService.xml
-product/framework/uimgbalibrary.jar
-product/framework/uimgbamanagerlibrary.jar
 product/framework/uimservicelibrary.jar
 
 # QSEECOM
@@ -2705,12 +2692,12 @@ vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # UFS
-odm/firmware/ufs/SAMSUNG-KLUDG4UHDC-B0E1.bin
 odm/firmware/ufs/SAMSUNG-KLUEG4RHHD-B0G1.bin
-odm/firmware/ufs/SAMSUNG-KLUEG8UHDC-B0E1.bin
-odm/firmware/ufs/SAMSUNG-KLUFG8RHDB-B0E1.bin
 odm/firmware/ufs/SAMSUNG-KLUFG8RHHD-B0G1.bin
+odm/firmware/ufs/SAMSUNG-KLUGGARHHD-B0G1.bin
+odm/firmware/ufs/SKhynix-HN8T274EJKX130.bin
 odm/firmware/ufs/move_target_ufs_fw_to_oplusreserve1.sh
+odm/firmware/ufs/ufs_version_config.xml
 
 # Video
 vendor/lib/libstreamparser.so
