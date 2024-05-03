@@ -37,8 +37,14 @@ void vendor_load_properties() {
     auto prjname = std::stoi(GetProperty("ro.boot.prjname", "0"));
 
     switch (hw_region_id) {
-        case 0: // aston IN/EU
-            OverrideProperty("ro.product.product.model", "CPH2585");
+        case 0: 
+            if (prjname == 22851) { // xigua
+                OverrideProperty("ro.product.device", "OP5943L1");
+                OverrideProperty("ro.product.vendor.device", "OP5943L1");
+                OverrideProperty("ro.product.product.model", "PJA110");
+            } else { // aston IN/EU
+                OverrideProperty("ro.product.product.model", "CPH2585");
+            }
             break;
         case 21:
             if (prjname == 22811) { // salami CN
