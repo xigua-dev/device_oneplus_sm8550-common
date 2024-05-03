@@ -18,6 +18,9 @@ on boot
 
     chmod 0000 /sys/kernel/oplus_display/hbm
 
+    # IR
+    chmod 0666 /dev/oplus_consumer_ir
+
     # Sensors
     chown system system /sys/devices/platform/soc/soc:sensor_fb/adsp_notify
 
