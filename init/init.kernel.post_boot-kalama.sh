@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2020-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2020-2023 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -128,6 +128,8 @@ echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
 if [ $rev == "1.0" ] || [ $rev == "1.1" ]; then
 	echo 1324800 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
+elif [ $rev == "2.0" ]; then
+	echo 1344000 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
 else
 	echo 1267200 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
 fi
@@ -148,6 +150,8 @@ echo 0 > /sys/devices/system/cpu/cpufreq/policy3/walt/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy3/walt/up_rate_limit_us
 if [ $rev == "1.0" ] || [ $rev == "1.1" ]; then
 	echo 1555200 > /sys/devices/system/cpu/cpufreq/policy3/walt/hispeed_freq
+elif [ $rev == "2.0" ]; then
+	echo 1536000 > /sys/devices/system/cpu/cpufreq/policy3/walt/hispeed_freq
 else
 	echo 1555200 > /sys/devices/system/cpu/cpufreq/policy3/walt/hispeed_freq
 fi
@@ -160,6 +164,8 @@ echo 0 > /sys/devices/system/cpu/cpufreq/policy7/walt/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy7/walt/up_rate_limit_us
 if [ $rev == "1.0" ] || [ $rev == "1.1" ]; then
 	echo 1593600 > /sys/devices/system/cpu/cpufreq/policy7/walt/hispeed_freq
+elif [ $rev == "2.0" ]; then
+	echo 1708800 > /sys/devices/system/cpu/cpufreq/policy7/walt/hispeed_freq
 else
 	echo 1728000 > /sys/devices/system/cpu/cpufreq/policy7/walt/hispeed_freq
 fi
