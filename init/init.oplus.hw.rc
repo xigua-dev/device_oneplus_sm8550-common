@@ -6,3 +6,7 @@
 
 on property:ro.boot.prjname=22851
     setprop ro.boot.hardware.revision "CN"
+
+on property:persist.xigua.1em_pulse=*
+    write /dev/kmsg "persist.xigua.1em_pulse changed: ${persist.xigua.1em_pulse}"
+    write /sys/kernel/oplus_display/pwm_onepulse ${persist.xigua.1em_pulse}
