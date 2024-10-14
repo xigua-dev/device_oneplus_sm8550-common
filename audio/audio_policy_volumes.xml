@@ -68,9 +68,9 @@ volume index from 0 to 100.
     </volume>
 	#else OPLUS_BUG_STABILITY -->
      <volume stream="AUDIO_STREAM_VOICE_CALL" deviceCategory="DEVICE_CATEGORY_EARPIECE">
-        <point>0,-3900</point>
-        <point>33,-2600</point>
-        <point>66,-1300</point>
+        <point>0,-3700</point>
+        <point>33,-1800</point>
+        <point>66,-900</point>
         <point>100,0</point>
     </volume>
     <!-- #endif OPLUS_BUG_STABILITY -->
@@ -375,6 +375,23 @@ volume index from 0 to 100.
                                                 ref="DEFAULT_NON_MUTABLE_VOLUME_CURVE"/>
     <volume stream="AUDIO_STREAM_ACCESSIBILITY" deviceCategory="DEVICE_CATEGORY_HEARING_AID"
                                                 ref="DEFAULT_NON_MUTABLE_HEARING_AID_VOLUME_CURVE"/>
+    <volume stream="AUDIO_STREAM_ASSISTANT" deviceCategory="DEVICE_CATEGORY_HEADSET"
+                                                ref="DEFAULT_MEDIA_VOLUME_CURVE"/>
+    <volume stream="AUDIO_STREAM_ASSISTANT" deviceCategory="DEVICE_CATEGORY_SPEAKER"
+                                                ref="DEFAULT_DEVICE_CATEGORY_SPEAKER_VOLUME_CURVE"/>
+    <volume stream="AUDIO_STREAM_ASSISTANT" deviceCategory="DEVICE_CATEGORY_EARPIECE"
+                                                ref="DEFAULT_MEDIA_VOLUME_CURVE"/>
+    <volume stream="AUDIO_STREAM_ASSISTANT" deviceCategory="DEVICE_CATEGORY_EXT_MEDIA"
+                                                ref="DEFAULT_MEDIA_VOLUME_CURVE"/>
+    <volume stream="AUDIO_STREAM_ASSISTANT" deviceCategory="DEVICE_CATEGORY_HEARING_AID"
+                                                ref="DEFAULT_HEARING_AID_VOLUME_CURVE"/>
+    <!-- #ifdef OPLUS_BUG_STABILITY
+    //Yuan.Bin@MM.AudioServer.Policy, 2024/05/23,modify for usb and a2dp volume -->
+    <volume stream="AUDIO_STREAM_ASSISTANT" deviceCategory="DEVICE_CATEGORY_USB_HEADSET"
+                                       ref="DEFAULT_MEDIA_VOLUME_CURVE_USB_HEADSET"/>
+    <volume stream="AUDIO_STREAM_ASSISTANT" deviceCategory="DEVICE_CATEGORY_A2DP"
+                                        ref="DEFAULT_MEDIA_VOLUME_CURVE_A2DP"/>
+    <!-- #endif OPLUS_BUG_STABILITY -->
     <volume stream="AUDIO_STREAM_REROUTING" deviceCategory="DEVICE_CATEGORY_HEADSET"
                                             ref="FULL_SCALE_VOLUME_CURVE"/>
 	<!-- #ifndef OPLUS_BUG_STABILITY
@@ -412,3 +429,4 @@ volume index from 0 to 100.
     <volume stream="AUDIO_STREAM_PATCH" deviceCategory="DEVICE_CATEGORY_HEARING_AID"
                                         ref="FULL_SCALE_VOLUME_CURVE"/>
 </volumes>
+
